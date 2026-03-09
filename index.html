@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Maquillaje a domicilio en Toluca | Luna Bella</title>
+<title>Maquillaje a domicilio en Toluca | Aulumen</title>
 
 <meta name="description" content="Maquillaje profesional a domicilio en Toluca para invitadas, novias y XV años. Agenda tu maquillaje por WhatsApp.">
 
@@ -48,12 +48,17 @@ margin:10px 0;
 display:inline-block;
 background:#22c55e;
 color:white;
-padding:16px 30px;
+padding:18px 34px;
 border-radius:40px;
 text-decoration:none;
 font-weight:500;
 margin-top:15px;
 box-shadow:0 8px 20px rgba(0,0,0,0.2);
+transition:.3s;
+}
+
+.cta:hover{
+transform:scale(1.05);
 }
 
 /* BENEFICIOS */
@@ -87,16 +92,42 @@ margin:40px 0 20px;
 
 .gallery{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
 padding:0 20px;
 }
 
 .gallery img{
 width:100%;
 border-radius:14px;
-height:210px;
+height:220px;
 object-fit:cover;
+cursor:pointer;
+transition:transform .3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.8);
+display:none;
+align-items:center;
+justify-content:center;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
 }
 
 /* PRECIO */
@@ -110,20 +141,10 @@ text-align:center;
 box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-.price-card h3{
-font-family:"Playfair Display",serif;
-font-size:26px;
-}
-
 .price{
 font-size:46px;
 color:#b97b66;
 margin:10px 0;
-}
-
-.price-card p{
-font-size:14px;
-line-height:1.6;
 }
 
 /* TESTIMONIOS */
@@ -166,36 +187,17 @@ text-decoration:none;
 box-shadow:0 8px 20px rgba(0,0,0,0.25);
 }
 
-/* DESKTOP */
-
-@media(min-width:768px){
-
-.gallery{
-grid-template-columns:repeat(4,1fr);
-}
-
-.features{
-grid-template-columns:repeat(4,1fr);
-}
-
-.logo{
-font-size:86px;
-}
-
-}
-
 </style>
 
 </head>
 
 <body>
 
-<div class="logo">Luna Bella</div>
+<div class="logo">Aulumen</div>
 
 <div class="hero">
 
 <p>Maquillaje profesional a domicilio en Toluca</p>
-
 <p>Invitadas • Novias • XV Años</p>
 
 <a class="cta" href="https://wa.me/521XXXXXXXXXX?text=Hola quiero agendar un maquillaje">
@@ -207,12 +209,10 @@ Agendar tu Maquillaje
 <div class="features">
 
 <div class="feature">💄 Maquillaje Social</div>
-
 <div class="feature">👁 Pestañas Incluidas</div>
-
 <div class="feature">🏡 Servicio a Domicilio</div>
-
 <div class="feature">🧼 Higiene Profesional</div>
+<div class="feature">🚗 Transporte sin costo en tu primera reserva</div>
 
 </div>
 
@@ -220,29 +220,30 @@ Agendar tu Maquillaje
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
+<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='100%' height='100%' fill='%23f8c8d8'/><circle cx='200' cy='150' r='90' fill='%23f1b0c0'/><text x='50%' y='90%' font-size='22' text-anchor='middle' fill='%235c3c44'>Maquillaje Glam</text></svg>" onclick="openImg(this.src)">
 
-<img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30">
+<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='100%' height='100%' fill='%23ffd9e2'/><circle cx='200' cy='150' r='90' fill='%23f0aab8'/><text x='50%' y='90%' font-size='22' text-anchor='middle'>Novia</text></svg>" onclick="openImg(this.src)">
 
-<img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8">
+<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='100%' height='100%' fill='%23f5c6cb'/><circle cx='200' cy='150' r='90' fill='%23e89aa8'/><text x='50%' y='90%' font-size='22' text-anchor='middle'>Labios Rojos</text></svg>" onclick="openImg(this.src)">
 
-<img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66">
+<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='100%' height='100%' fill='%23fbd5e5'/><circle cx='200' cy='150' r='90' fill='%23eaa9bc'/><text x='50%' y='90%' font-size='22' text-anchor='middle'>Smokey Eyes</text></svg>" onclick="openImg(this.src)">
+
+<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='100%' height='100%' fill='%23ffe3ec'/><circle cx='200' cy='150' r='90' fill='%23e8a7b9'/><text x='50%' y='90%' font-size='22' text-anchor='middle'>Natural Glow</text></svg>" onclick="openImg(this.src)">
+
+<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='100%' height='100%' fill='%23ffd0e0'/><circle cx='200' cy='150' r='90' fill='%23e29cb0'/><text x='50%' y='90%' font-size='22' text-anchor='middle'>Evento</text></svg>" onclick="openImg(this.src)">
 
 </div>
 
 <div class="price-card">
 
 <h3>Maquillaje Profesional</h3>
-
-<div class="price">$350</div>
+<div class="price">$450</div>
 
 <p>
-
 ✔ Maquillaje completo<br>
 ✔ Pestañas postizas incluidas<br>
-✔ Preparación de piel<br>
+✔ Preparación profesional de piel<br>
 ✔ Protocolos de higiene profesional
-
 </p>
 
 <br>
@@ -262,31 +263,39 @@ Precio justo por servicio profesional
 <div class="testimonials">
 
 <div class="testimonial">
-“Me encantó mi maquillaje para una boda, duró toda la noche.”
-⭐⭐⭐⭐⭐
+“Me encantó mi maquillaje para una boda, duró toda la noche.” ⭐⭐⭐⭐⭐
 </div>
 
 <div class="testimonial">
-“Quedé fascinada con mi maquillaje para mis XV.”
-⭐⭐⭐⭐⭐
+“Quedé fascinada con mi maquillaje para mis XV.” ⭐⭐⭐⭐⭐
 </div>
 
 <div class="testimonial">
-“Muy profesional y puntual.”
-⭐⭐⭐⭐⭐
+“Muy profesional y puntual.” ⭐⭐⭐⭐⭐
 </div>
 
 </div>
 
 <footer>
-
 Maquillaje a domicilio en Toluca • Bodas • XV Años • Eventos
-
 </footer>
 
 <a class="whatsapp" href="https://wa.me/521XXXXXXXXXX?text=Hola quiero información de maquillaje">
 WhatsApp
 </a>
+
+<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
+<img id="lightbox-img">
+</div>
+
+<script>
+
+function openImg(src){
+document.getElementById("lightbox").style.display="flex"
+document.getElementById("lightbox-img").src=src
+}
+
+</script>
 
 </body>
 </html>
