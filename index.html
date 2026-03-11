@@ -88,48 +88,6 @@ font-size:32px;
 margin:40px 0 20px;
 }
 
-/* GALERIA */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:15px;
-padding:0 20px;
-}
-
-.gallery img{
-width:100%;
-border-radius:14px;
-height:220px;
-object-fit:cover;
-cursor:pointer;
-transition:transform .3s;
-}
-
-.gallery img:hover{
-transform:scale(1.05);
-}
-
-/* LIGHTBOX */
-
-.lightbox{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.8);
-display:none;
-align-items:center;
-justify-content:center;
-}
-
-.lightbox img{
-max-width:90%;
-max-height:90%;
-border-radius:10px;
-}
-
 /* PRECIO */
 
 .price-card{
@@ -200,7 +158,7 @@ box-shadow:0 8px 20px rgba(0,0,0,0.25);
 <p>Maquillaje profesional a domicilio en Toluca</p>
 <p>Invitadas • Novias • XV Años</p>
 
-<a class="cta" href="https://wa.me/521XXXXXXXXXX?text=Hola quiero agendar un maquillaje">
+<a class="cta" href="https://wa.me/5217291348968?text=Hola quiero agendar un maquillaje">
 Agendar tu Maquillaje
 </a>
 
@@ -213,24 +171,6 @@ Agendar tu Maquillaje
 <div class="feature">🏡 Servicio a Domicilio</div>
 <div class="feature">🧼 Higiene Profesional</div>
 <div class="feature">🚗 Transporte sin costo en tu primera reserva</div>
-
-</div>
-
-<div class="section-title">Galería de Resultados</div>
-
-<div class="gallery">
-
-<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='100%' height='100%' fill='%23f8c8d8'/><circle cx='200' cy='150' r='90' fill='%23f1b0c0'/><text x='50%' y='90%' font-size='22' text-anchor='middle' fill='%235c3c44'>Maquillaje Glam</text></svg>" onclick="openImg(this.src)">
-
-<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='100%' height='100%' fill='%23ffd9e2'/><circle cx='200' cy='150' r='90' fill='%23f0aab8'/><text x='50%' y='90%' font-size='22' text-anchor='middle'>Novia</text></svg>" onclick="openImg(this.src)">
-
-<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='100%' height='100%' fill='%23f5c6cb'/><circle cx='200' cy='150' r='90' fill='%23e89aa8'/><text x='50%' y='90%' font-size='22' text-anchor='middle'>Labios Rojos</text></svg>" onclick="openImg(this.src)">
-
-<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='100%' height='100%' fill='%23fbd5e5'/><circle cx='200' cy='150' r='90' fill='%23eaa9bc'/><text x='50%' y='90%' font-size='22' text-anchor='middle'>Smokey Eyes</text></svg>" onclick="openImg(this.src)">
-
-<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='100%' height='100%' fill='%23ffe3ec'/><circle cx='200' cy='150' r='90' fill='%23e8a7b9'/><text x='50%' y='90%' font-size='22' text-anchor='middle'>Natural Glow</text></svg>" onclick="openImg(this.src)">
-
-<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='100%' height='100%' fill='%23ffd0e0'/><circle cx='200' cy='150' r='90' fill='%23e29cb0'/><text x='50%' y='90%' font-size='22' text-anchor='middle'>Evento</text></svg>" onclick="openImg(this.src)">
 
 </div>
 
@@ -248,7 +188,7 @@ Agendar tu Maquillaje
 
 <br>
 
-<a class="cta" href="https://wa.me/521XXXXXXXXXX?text=Hola quiero reservar maquillaje">
+<a class="cta" href="https://wa.me/5217291348968?text=Hola quiero reservar maquillaje">
 Reservar por WhatsApp
 </a>
 
@@ -280,22 +220,12 @@ Precio justo por servicio profesional
 Maquillaje a domicilio en Toluca • Bodas • XV Años • Eventos
 </footer>
 
-<a class="whatsapp" href="https://wa.me/521XXXXXXXXXX?text=Hola quiero información de maquillaje">
+<a class="whatsapp" href="https://wa.me/5217291348968?text=Hola quiero información de maquillaje">
 WhatsApp
 </a>
 
-<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
-<img id="lightbox-img">
-</div>
-
-<script>
-
-function openImg(src){
-document.getElementById("lightbox").style.display="flex"
-document.getElementById("lightbox-img").src=src
-}
-
-</script>
-
 </body>
 </html>
+
+
+
